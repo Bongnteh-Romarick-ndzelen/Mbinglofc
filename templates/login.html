@@ -1,0 +1,73 @@
+
+{% load static %}
+
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login page</title>
+    <link href="{% static 'login.css' %}" rel="stylesheet" />
+  </head>
+  
+  <body>
+
+    <section>
+      <header>
+        <ul>
+        <li><a class="logo" href="#">MBINGLO FC</a></li>
+        <a class="signup" href="/signup">Sign Up</a>
+      </ul>
+      </header><hr>
+    </section>
+    <div>
+      <style>
+        h5 {
+          color: white;
+          font-weight: brown;
+          font-size:1.3em;
+          text-align:center;
+          padding-left:10px;
+          margin-top:0px;
+          margin-bottom:0px;
+        }
+      </style>
+      {% for messages in messages %}
+      <h5>{{messages}}</h5>
+      {% endfor %}
+    </div>
+
+    <div class="form">
+      <center>
+        <form action="/" method="post">
+          {% csrf_token %}
+          <h1>Login</h1>
+          <label for="username"></label>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Enter Username"
+            required
+          /><br /><br />
+
+          <label for="Password"></label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Enter Password"
+            required
+          /><br/><br/>
+
+          <input type="submit" value="Login" />
+
+          <p> Do not have an account</p>
+
+          <a class="create" href="/signup">Create Account</a>
+        </form>
+      </center>
+    </div>
+  </body>
+</html>

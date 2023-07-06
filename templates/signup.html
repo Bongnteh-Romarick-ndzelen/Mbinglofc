@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup page</title>
+    <link rel="stylesheet" href="{% static 'signup.css' %}" />
+  </head>
+  <body>
+
+    <section>
+      <header>
+        <ul>
+        <li><a class="logo" href="#">MBINGLO FC</a></li>
+        <a class="signup" href="/login">Login</a>
+      </ul>
+      </header><br>
+    </section>
+
+    <div>
+      <style>
+        h5 {
+          color: white;
+          font-weight: bold;
+          font-size:1.3em;
+          text-align: center;
+        }
+      </style>
+      {% for messages in messages %}
+      <h5>{{messages}}</h5>
+      {% endfor %}
+    </div>
+
+    <div class="form">
+      <center>
+        <form action="#" method="post">
+          {% csrf_token %}
+          <h1>Signup</h1>
+          <label for="username"></label>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Enter Username"
+            required
+          /><br /><br />
+
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter Email Address"
+            required
+          /><br /><br />
+
+          <label for="Password"></label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Enter Password"
+            required
+          /><br /><br />
+
+          <label for="Password"></label>
+          <input
+            type="password"
+            name="password2"
+            id="password"
+            placeholder="Confirm Password"
+            required
+          /><br /><br />
+
+          <input type="submit" value="Signup" /><br />
+
+        </form>
+      </center>
+    </div>
+  </body>
+</html>
