@@ -1,6 +1,4 @@
-
 {% load static %}
-
 
 <html lang="en">
   <head>
@@ -10,27 +8,27 @@
     <title>Login page</title>
     <link href="{% static 'login.css' %}" rel="stylesheet" />
   </head>
-  
-  <body>
 
+  <body>
     <section>
       <header>
         <ul>
-        <li><a class="logo" href="#">MBINGLO FC</a></li>
-        <a class="signup" href="/signup">Sign Up</a>
-      </ul>
-      </header><hr>
+          <li><a class="logo" href="#">MBINGLO FC</a></li>
+          <a class="signup" href="/signup">Sign Up</a>
+        </ul>
+      </header>
+      <hr />
     </section>
     <div>
       <style>
         h5 {
           color: white;
           font-weight: brown;
-          font-size:1.3em;
-          text-align:center;
-          padding-left:10px;
-          margin-top:0px;
-          margin-bottom:0px;
+          font-size: 1.3em;
+          text-align: center;
+          padding-left: 10px;
+          margin-top: 0px;
+          margin-bottom: 0px;
         }
       </style>
       {% for messages in messages %}
@@ -59,11 +57,11 @@
             id="password"
             placeholder="Enter Password"
             required
-          /><br/><br/>
+          /><br /><br />
 
           <input type="submit" value="Login" />
 
-          <p> Do not have an account</p>
+          <p>Do not have an account</p>
 
           <a class="create" href="/signup">Create Account</a>
         </form>

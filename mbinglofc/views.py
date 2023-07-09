@@ -5,12 +5,12 @@ from django.contrib.auth.decorators import login_required
 from .models import Profile
 
 # Create your views here.
-@login_required(login_url='login')
+#@login_required(login_url='login')
 def index(request):
     return render(request, 'index.html')
 
 
-@login_required(login_url='login')
+
 def signup(request):
     if request.method =='POST':
         
@@ -26,6 +26,8 @@ def signup(request):
             elif User.objects.filter(username=username).exists():
                 messages.info(request, 'Username already in used, used a different username')
                 return redirect('signup')
+            
+            
             else:
                 user = User.objects.create_user(username=username, email=email, password=password)
                 user.save()
@@ -42,7 +44,6 @@ def signup(request):
             return redirect('signup')
     else:
         return render(request, 'signup.html')
-@login_required(login_url='login')
 def login(request):
     if request.method == 'POST':
         username = request.POST['username']
@@ -60,4 +61,6 @@ def login(request):
     else:
         return render(request, 'login.html')
 def logout(request):
-    pass
+    auth.logout(request)
+    return redirect('login')
+    
