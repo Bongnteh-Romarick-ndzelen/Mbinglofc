@@ -2,13 +2,13 @@ body {
   width: 100%;
   height: 100%;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: rgba(59, 70, 70, 0.9);
+  background-color: rgba(103, 131, 131, 0.9);
   margin-top: 0px;
 }
 form {
   width: 350px;
   height: 370px;
-  background-color:  rgb(0, 255, 238);
+  background-color: rgb(42, 116, 88);
   border-radius: 10px;
   box-shadow: 12px 2px 16px rgb(2, 2, 14);
   padding-top: 10px;
@@ -29,7 +29,6 @@ input[type="password"] {
     rgba(0, 0, 255, 0.847),
     rgba(8, 98, 194, 0.796)
   );
-
 }
 input[type="submit"] {
   width: 86%;
@@ -83,15 +82,15 @@ h1 {
   font-size: 2rem;
   border-radius: 5px;
 }
-.signup{
+.signup {
   font-size: 1.3rem;
   font-weight: bold;
   border-radius: 5px;
-  color: rgb(18, 4, 106);
+  color: rgb(243, 242, 246);
   float: right;
   padding-right: 40px;
 }
-  ul li {
+ul li {
   list-style-type: none;
   display: inline-block;
 }
