@@ -56,11 +56,11 @@ def login(request):
             auth.login(request, user)
             return redirect('/')
         
-        if user is None:
+        else:
             messages.info(request, 'Invalid Credentials!')
             return redirect('login')
-    
-    return render(request, 'login.html')
+    else:
+        return render(request, 'login.html')
 def logout(request):
     auth.logout(request)
     return redirect('login')
