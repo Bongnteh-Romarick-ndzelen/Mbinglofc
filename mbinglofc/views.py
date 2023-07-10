@@ -23,7 +23,8 @@ def signup(request):
             if User.objects.filter(email=email).exists():
                 messages.info(request, 'Email already Exist, used a different email address')
                 return redirect('signup')
-            elif User.objects.filter(username=username).exists():
+            
+            if User.objects.filter(username=username).exists():
                 messages.info(request, 'Username already in used, used a different username')
                 return redirect('signup')
             
@@ -55,11 +56,11 @@ def login(request):
             auth.login(request, user)
             return redirect('/')
         
-        else:
+        if user is None:
             messages.info(request, 'Invalid Credentials!')
             return redirect('login')
-    else:
-        return render(request, 'login.html')
+    
+    return render(request, 'login.html')
 def logout(request):
     auth.logout(request)
     return redirect('login')
