@@ -4,5 +4,9 @@
   "python.testing.pytestEnabled": true,
   "debug.javascript.defaultRuntimeExecutable": {
     "pwa-node": "node"
-  }
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "python.formatting.provider": "none"
 }

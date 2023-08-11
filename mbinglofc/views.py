@@ -25,7 +25,7 @@ def signup(request):
                 return redirect('signup')
             
             if User.objects.filter(username=username).exists():
-                messages.info(request, 'Username already in used, used a different username')
+                messages.info(request, 'Username already in used, used a different username to register')
                 return redirect('signup')
             
             
@@ -41,7 +41,7 @@ def signup(request):
                 new_profile.save()
                 return redirect('login')
         else:
-            messages.info(request, "Password not Matching")
+            messages.info(request, "Password not Matching, please enter password again")
             return redirect('signup')
     else:
         return render(request, 'signup.html')
@@ -57,7 +57,7 @@ def login(request):
             return redirect('/')
         
         else:
-            messages.info(request, 'Invalid Credentials!')
+            messages.info(request, 'Invalid Credentials!, make sure you enter the correct information in oder to login')
             return redirect('login')
     else:
         return render(request, 'login.html')
