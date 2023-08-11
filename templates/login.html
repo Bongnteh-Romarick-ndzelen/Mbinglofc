@@ -6,66 +6,165 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login page</title>
-    <link href="{% static 'login.css' %}" rel="stylesheet" />
+
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet" />
+    <link
+      href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static 'assets/vendor/remixicon/remixicon.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}"
+      rel="stylesheet"
+    />
+
+    <!--Main Template css-->
+    <!-- Vendor CSS Files -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    />
+
+    <link rel="stylesheet" href="{% static 'assets/css/login.css' %}" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
   </head>
 
-  <body>
+  <body class="bg-info">
     <section>
-      <header>
-        <ul>
-          <li><a class="logo" href="#">MBINGLO FC</a></li>
-          <a class="signup" href="/signup">Sign Up</a>
-        </ul>
-      </header>
-      <hr />
+      <nav
+        class="navbar navbar-expand-lg navbar-dark p-3 fixed-top"
+        style="background-color: rgb(4, 107, 107)"
+      >
+        <div class="container">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="#!">MBINGLO FC</a>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link" href="#about"></a></li>
+              <li class="nav-item"><a class="nav-link" href="#blog"></a></li>
+              <li class="nav-item"><a class="nav-link" href="#matches"></a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="/signup">Register</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <br /><br /><br /><br />
     </section>
-    <div>
-      <style>
-        h5 {
-          color: white;
-          font-weight: brown;
-          font-size: 1.3em;
-          text-align: center;
-          padding-left: 10px;
-          margin-top: 0px;
-          margin-bottom: 0px;
-        }
-      </style>
-      {% for messages in messages %}
-      <h5>{{messages}}</h5>
-      {% endfor %}
-    </div>
+    <!--End of navbar-->
 
-    <div class="form">
-      <center>
-        <form action="/" method="post">
-          {% csrf_token %}
-          <h1>Login</h1>
-          <label for="username"></label>
-          <input
-            type="text"
-            name="username"
-            id="username"
-            placeholder="Enter Username"
-            required
-          /><br /><br />
-
-          <label for="Password"></label>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            placeholder="Enter Password"
-            required
-          /><br /><br />
-
-          <input type="submit" value="Login" />
-        </form>
-
-        <p>Do not have an account</p>
-
-        <a class="si" href="/signup"><strong>Signup</strong></a>
-      </center>
-    </div>
+    <section>
+      <div class="container">
+        <div
+          class="container col-lg-7 mt-5 p-4 card rounded-20 shadow"
+          style="background-color: rgba(24, 36, 39, 0.933);"
+          >
+          <center>
+            <h2 class="justify-content-center text-white"><i class="material-icons bg-light rounded mr-2">person</i>Login</h2>
+          </center>
+          <div class="bg-danger text-center text-danger fw-bolder rounded" role="alert">
+            {% for message in messages %}
+            <h5>{{message}}</h5>
+            {% endfor %}
+          </div>
+          <form class="card rounded-15" method="post" action="" style="background-color: rgba(24, 36, 39, 0.933);">
+            {% csrf_token %}
+            <div class="form-group text-white">
+              <label for="email"></label>
+              <div class="input-group">
+                <div class="input-group-addon bg-danger">
+                  <i class="material-icons justify-content-center">person</i>
+                </div>
+                <input
+                name="username"
+                type="text"
+                class="form-control text-center"
+                id="username"
+                placeholder="Enter Your Username"
+                required
+                />
+              </div>
+            </div>
+            <div class="form-group text-white">
+              <label for="password"></label>
+              <div class="input-group">
+                <div class="input-group-addon bg-danger">
+                  <i class="material-icons justify-content-center">key</i>
+                </div>
+                <input
+                name="password"
+                type="password"
+                class="form-control text-center"
+                id="password"
+                placeholder="Enter Your Password"
+                required
+                />
+              </div>
+            </div>
+            <div class="form-group form-check justify-content-start">
+              <label for="checkbox"></label>
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="exampleCheck1"
+                required
+              />
+              <label class="form-check-label text-white" for="checkme"
+                >Remember me</label
+              >
+              <a
+                class="pass d-inline-block text-white justify-content-end py-1 float-right px-3"
+                href="#"
+              >
+                Forgot Password</a
+              >
+            </div>
+            <input type="submit" value="Login" class="btn btn-success form-control my-2"/>
+          </form>
+        </div>
+      </div>
+      <div class="text-center mt-2 justify-content-center">
+        <p class="para">Don't yet have an account
+          <a class="btn btn-danger text-white m-3 allowed" href="/signup">Create an Account</a>
+        </p>
+      </div>
+    </section>
   </body
 </html>
