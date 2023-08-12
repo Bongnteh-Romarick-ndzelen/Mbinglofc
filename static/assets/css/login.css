@@ -27,6 +27,13 @@
   /* Support for IE. */
   font-feature-settings: "liga";
 }
+.bg-img {
+  background-image: url('football.jpg') !important;
+  background-repeat: no-repeat !important;
+  background-size:cover !important;
+  background-position:center !important;
+  //opacity:0.5 !important;
+}
 .bg-danger {
   background-color: #bb9f8a !important;
 }

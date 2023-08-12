@@ -22,7 +22,9 @@
       rel="stylesheet"
     />
   </head>
-  <body class="bg-info">
+  <body
+    class="bg-img"
+  >
     <section>
       <nav
         class="navbar navbar-expand-lg navbar-dark p-3 fixed-top"
@@ -50,7 +52,7 @@
               <li class="nav-item"><a class="nav-link" href="#blog"></a></li>
               <li class="nav-item"><a class="nav-link" href="#matches"></a></li>
               <li class="nav-item">
-                <a class="nav-link" href="/login">Login</a>
+                <a class="nav-link" href="/login"><i class="material-icons bg-light rounded mr-2">person</i>Login</a>
               </li>
             </ul>
           </div>
@@ -64,7 +66,7 @@
       <div class="container">
         <div
           class="container col-lg-7 mt-5 p-4 card rounded-20 shadow"
-          style="background-color: rgba(24, 36, 39, 0.933);"
+          style="background-color: rgba(24, 36, 39, 0.933)"
         >
           <center>
             <h2 class="justify-content-center text-white">
@@ -144,6 +146,13 @@
             </div>
             <input type="submit" value="Register" class="form-control my-2" />
           </form>
+          <div class="text-center mt-2 justify-content-center">
+            <p class="para text-white">
+              Already have an account<a class="text-danger m-3" href="/login"
+                >Login</a
+              >
+            </p>
+          </div>
           <div class="bg-danger text-danger fw-bolder rounded" role="alert">
             {% for message in messages %}
             <h5 class="p-3">{{message}}</h5>
@@ -151,16 +160,7 @@
           </div>
         </div>
       </div>
-      <div class="text-center mt-2 justify-content-center">
-        <p class="para">
-          Already have an account<a
-            class="btn btn-dark m-3 allowed"
-            href="/login"
-            >Login</a
-          >
-        </p>
-      </div>
-    </section>
+    </section><br><br>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>

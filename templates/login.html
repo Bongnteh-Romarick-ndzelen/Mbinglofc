@@ -52,7 +52,7 @@
     />
   </head>
 
-  <body class="bg-info">
+  <body class="bg-img">
     <section>
       <nav
         class="navbar navbar-expand-lg navbar-dark p-3 fixed-top"
@@ -80,7 +80,7 @@
               <li class="nav-item"><a class="nav-link" href="#blog"></a></li>
               <li class="nav-item"><a class="nav-link" href="#matches"></a></li>
               <li class="nav-item">
-                <a class="nav-link" href="/signup">Register</a>
+                <a class="nav-link" href="/signup"><i class="material-icons bg-light rounded mr-2">person</i>Register</a>
               </li>
             </ul>
           </div>
@@ -153,6 +153,11 @@
             </div>
             <input type="submit" value="Login" class="btn btn-success form-control my-2"/>
           </form>
+          <div class="text-center mt-2 justify-content-center">
+            <p class="para text-white">Don't yet have an account
+              <a class="text-danger m-3" href="/signup">Signup</a>
+            </p>
+          </div>
           <div class="bg-danger text-danger fw-bolder rounded" role="alert">
             {% for message in messages %}
             <h5 class="p-3">{{message}}</h5>
@@ -160,11 +165,6 @@
           </div>
         </div>
       </div>
-      <div class="text-center mt-2 justify-content-center">
-        <p class="para">Don't yet have an account
-          <a class="btn btn-danger text-white m-3 allowed" href="/signup">Create an Account</a>
-        </p>
-      </div>
-    </section>
+    </section><br><br>
   </body
 </html>

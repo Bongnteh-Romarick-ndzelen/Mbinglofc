@@ -70,7 +70,7 @@ def login(request):
         else:
             messages.info(
                 request,
-                "Invalid Credentials!, please make sure you enter the correct information in oder to login",
+                "Invalid Credentials, please make sure you enter the correct information in oder to login",
             )
             return redirect("login")
     else:
