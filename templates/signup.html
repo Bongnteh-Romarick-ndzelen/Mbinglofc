@@ -71,11 +71,6 @@
               <i class="material-icons bg-light rounded mr-2">person</i>Register
             </h2>
           </center>
-          <div class="bg-danger text-center text-danger fw-bolder rounded" role="alert">
-            {% for message in messages %}
-            <h5>{{message}}</h5>
-            {% endfor %}
-          </div>
           <form
             class="card rounded-15"
             style="background-color: rgba(24, 36, 39, 0.933)"
@@ -149,6 +144,11 @@
             </div>
             <input type="submit" value="Register" class="form-control my-2" />
           </form>
+          <div class="bg-danger text-danger fw-bolder rounded" role="alert">
+            {% for message in messages %}
+            <h5 class="p-3">{{message}}</h5>
+            {% endfor %}
+          </div>
         </div>
       </div>
       <div class="text-center mt-2 justify-content-center">

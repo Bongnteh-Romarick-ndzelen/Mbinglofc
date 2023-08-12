@@ -99,11 +99,6 @@
           <center>
             <h2 class="justify-content-center text-white"><i class="material-icons bg-light rounded mr-2">person</i>Login</h2>
           </center>
-          <div class="bg-danger text-center text-danger fw-bolder rounded" role="alert">
-            {% for message in messages %}
-            <h5>{{message}}</h5>
-            {% endfor %}
-          </div>
           <form class="card rounded-15" method="post" action="" style="background-color: rgba(24, 36, 39, 0.933);">
             {% csrf_token %}
             <div class="form-group text-white">
@@ -158,6 +153,11 @@
             </div>
             <input type="submit" value="Login" class="btn btn-success form-control my-2"/>
           </form>
+          <div class="bg-danger text-danger fw-bolder rounded" role="alert">
+            {% for message in messages %}
+            <h5 class="p-3">{{message}}</h5>
+            {% endfor %}
+          </div>
         </div>
       </div>
       <div class="text-center mt-2 justify-content-center">

@@ -1,10 +1,10 @@
 /*Material icons*/
 
 .material-icons {
-  font-family: 'Material Icons';
+  font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
-  font-size: 33px;  /* Preferred icon size */
+  font-size: 33px; /* Preferred icon size */
   display: inline-block;
   line-height: 1;
   text-transform: none;
@@ -12,9 +12,9 @@
   word-wrap: normal;
   white-space: nowrap;
   direction: ltr;
-  color:#003700;
-  justify-content:center;
-  align-items:center;
+  color: #003700;
+  justify-content: center;
+  align-items: center;
 
   /* Support for all WebKit browsers. */
   -webkit-font-smoothing: antialiased;
@@ -25,78 +25,77 @@
   -moz-osx-font-smoothing: grayscale;
 
   /* Support for IE. */
-  font-feature-settings: 'liga';
+  font-feature-settings: "liga";
 }
 .bg-danger {
-    background-color:#bb9f8a !important;
+  background-color: #bb9f8a !important;
 }
-.login{
-    height:1.2rem;
-    color:blue;
-    display:inline-block;
-    background-color:green;
+.login {
+  height: 1.2rem;
+  color: blue;
+  display: inline-block;
+  background-color: green;
 }
 .pass {
-    background-color: #c6ffff !important;
-    border-radius: 5px !important;
-    color:#fb0045 !important;
+  background-color: #c6ffff !important;
+  border-radius: 5px !important;
+  color: #fb0045 !important;
 }
-input[type='submit'] {
-    font-size:1.3em;
-    background-color:#00c1c1;
-    color:black;
-    font-weight:bold;
+input[type="submit"] {
+  font-size: 1.3em;
+  background-color: #00c1c1;
+  color: black;
+  font-weight: bold;
 }
-input[type='submit']:hover {
-    background-color:#148592;
-    font-weight:bold;
-    color:black;
+input[type="submit"]:hover {
+  background-color: #148592;
+  font-weight: bold;
+  color: black;
 }
 .img-fluid {
-    height:1.6em;
-    margin-right:12px;
+  height: 1.6em;
+  margin-right: 12px;
 }
 .google {
-    background-color:#00ffff;
-    color:black;
-    font-weight:bold;
+  background-color: #00ffff;
+  color: black;
+  font-weight: bold;
 }
 .google:hover {
-    background-color:#0b9ca8;
-    color:black;
+  background-color: #0b9ca8;
+  color: black;
 }
 .facebook {
-    background-color:#a6ffa6;
-    color:#000000;
-    font-weight:bold;
-    
+  background-color: #a6ffa6;
+  color: #000000;
+  font-weight: bold;
 }
 .facebook:hover {
-    background-color:#008fdd;
-    color:black;
-    font-weight:bold;
+  background-color: #008fdd;
+  color: black;
+  font-weight: bold;
 }
 .horizontal-line {
-    border:none;
-    height: 1px;
-    background-color: white;
-    color: white;
+  border: none;
+  height: 1px;
+  background-color: white;
+  color: white;
 }
 .allowed {
-    background-color: #04078c !important;
-    font-size: 1.3rem;
+  background-color: #04078c !important;
+  font-size: 1.3rem;
 }
 .para {
-    font-size: 1.6rem !important;
-    font-family: sans-serif !important;
-    font-weight:border !important;
+  font-size: 1.2rem !important;
+  font-family: sans-serif !important;
+  font-weight: border !important;
 }
 .allowed:hover {
-    background-color:#b00058 !important;
+  background-color: #b00058 !important;
 }
 
 /*Navbar*/
-	.nav {
+.nav {
   --bs-nav-link-padding-x: 1rem;
   --bs-nav-link-padding-y: 0.5rem;
   --bs-nav-link-font-weight: ;
@@ -117,14 +116,16 @@ input[type='submit']:hover {
   font-weight: var(--bs-nav-link-font-weight);
   color: var(--bs-nav-link-color);
   text-decoration: none;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
   .nav-link {
     transition: none;
   }
 }
-.nav-link:hover, .nav-link:focus {
+.nav-link:hover,
+.nav-link:focus {
   color: var(--bs-nav-link-hover-color);
 }
 .nav-link.disabled {
@@ -141,7 +142,8 @@ input[type='submit']:hover {
   --bs-nav-tabs-link-active-color: #495057;
   --bs-nav-tabs-link-active-bg: #fff;
   --bs-nav-tabs-link-active-border-color: #dee2e6 #dee2e6 #fff;
-  border-bottom: var(--bs-nav-tabs-border-width) solid var(--bs-nav-tabs-border-color);
+  border-bottom: var(--bs-nav-tabs-border-width) solid
+    var(--bs-nav-tabs-border-color);
 }
 .nav-tabs .nav-link {
   margin-bottom: calc(-1 * var(--bs-nav-tabs-border-width));
@@ -150,11 +152,13 @@ input[type='submit']:hover {
   border-top-left-radius: var(--bs-nav-tabs-border-radius);
   border-top-right-radius: var(--bs-nav-tabs-border-radius);
 }
-.nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link:focus {
   isolation: isolate;
   border-color: var(--bs-nav-tabs-link-hover-border-color);
 }
-.nav-tabs .nav-link.disabled, .nav-tabs .nav-link:disabled {
+.nav-tabs .nav-link.disabled,
+.nav-tabs .nav-link:disabled {
   color: var(--bs-nav-link-disabled-color);
   background-color: transparent;
   border-color: transparent;
@@ -266,7 +270,8 @@ input[type='submit']:hover {
   text-decoration: none;
   white-space: nowrap;
 }
-.navbar-brand:hover, .navbar-brand:focus {
+.navbar-brand:hover,
+.navbar-brand:focus {
   color: var(--bs-navbar-brand-hover-color);
 }
 
@@ -639,7 +644,3 @@ input[type='submit']:hover {
   --bs-navbar-toggler-border-color: rgba(255, 255, 255, 0.1);
   --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
-
-
-
-
