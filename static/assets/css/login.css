@@ -4,9 +4,9 @@
   font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
-  font-size: 33px; /* Preferred icon size */
+  font-size: 45px; /* Preferred icon size */
   display: inline-block;
-  line-height: 1;
+  line-height: 2;
   text-transform: none;
   letter-spacing: normal;
   word-wrap: normal;
@@ -28,10 +28,7 @@
   font-feature-settings: "liga";
 }
 .bg-img {
-  background-image: url('football.jpg') !important;
-  background-repeat: no-repeat !important;
-  background-size:cover !important;
-  background-position:center !important;
+  background-color: #235f26 !important;
   //opacity:0.5 !important;
 }
 .bg-danger {
@@ -44,20 +41,34 @@
   background-color: green;
 }
 .pass {
-  background-color: #c6ffff !important;
-  border-radius: 5px !important;
-  color: #fb0045 !important;
+  background-color: #00bbbb !important;
+  //border-radius: 5px !important;
+  color: #bb0033 !important;
+}
+.pass:hover {
+  background-color: #40316c !important;
+  //border-radius: 5px !important;
+  color: #ffe1ea !important;
 }
 input[type="submit"] {
-  font-size: 1.3em;
-  background-color: #00c1c1;
+  font-size: 1.5em;
+  background-color: #13df37;
   color: black;
   font-weight: bold;
+  padding-top: 10px 0 !important;
+  //padding-bottom: 10px !important;
 }
 input[type="submit"]:hover {
-  background-color: #148592;
+  background-color: #0d5259;
   font-weight: bold;
   color: black;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding-top: 25px !important;
+  padding-bottom: 25px !important;
+  background-color:#00c6c6 !important;
 }
 .img-fluid {
   height: 1.6em;

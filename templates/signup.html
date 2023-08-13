@@ -22,60 +22,26 @@
       rel="stylesheet"
     />
   </head>
-  <body
-    class="bg-img"
-  >
+  <body class="bg-img">
     <section>
-      <nav
-        class="navbar navbar-expand-lg navbar-dark p-3 fixed-top"
-        style="background-color: rgb(4, 107, 107)"
-      >
-        <div class="container">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <a class="navbar-brand" href="#!">MBINGLO FC</a>
-          <div
-            class="collapse navbar-collapse justify-content-end"
-            id="navbarSupportedContent"
-          >
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item"><a class="nav-link" href="#about"></a></li>
-              <li class="nav-item"><a class="nav-link" href="#blog"></a></li>
-              <li class="nav-item"><a class="nav-link" href="#matches"></a></li>
-              <li class="nav-item">
-                <a class="nav-link" href="/login"><i class="material-icons bg-light rounded mr-2">person</i>Login</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <br /><br /><br /><br />
-    </section>
-    <!--End of navbar-->
-
-    <section>
-      <div class="container">
+      <div class="container shadow-lg" style="background-color:#0c3643;">
         <div
           class="container col-lg-7 mt-5 p-4 card rounded-20 shadow"
-          style="background-color: rgba(24, 36, 39, 0.933)"
+          style="background-color: #0f310f;"
         >
           <center>
             <h2 class="justify-content-center text-white">
               <i class="material-icons bg-light rounded mr-2">person</i>Register
             </h2>
           </center>
+           <div class="bg-danger text-danger fw-bolder rounded" role="alert">
+            {% for message in messages %}
+            <h5 class="p-3">{{message}}</h5>
+            {% endfor %}
+          </div>
           <form
-            class="card rounded-15"
-            style="background-color: rgba(24, 36, 39, 0.933)"
+            class="card rounded-15 shadow"
+            style="background-color: #112e10;"
             action=""
             method="post"
           >
@@ -144,7 +110,7 @@
                 />
               </div>
             </div>
-            <input type="submit" value="Register" class="form-control my-2" />
+            <input type="submit" value="Register" class="form-control mt-2" />
           </form>
           <div class="text-center mt-2 justify-content-center">
             <p class="para text-white">
@@ -153,14 +119,10 @@
               >
             </p>
           </div>
-          <div class="bg-danger text-danger fw-bolder rounded" role="alert">
-            {% for message in messages %}
-            <h5 class="p-3">{{message}}</h5>
-            {% endfor %}
-          </div>
         </div>
       </div>
-    </section><br><br>
+    </section>
+    <br /><br />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
