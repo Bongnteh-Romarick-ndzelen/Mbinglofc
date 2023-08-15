@@ -52,7 +52,7 @@
     />
   </head>
 
-  <body class="bg-img justify-content-center text-center">
+  <body class="bg-img">
     <section>
       <div class="container shadow-lg" style="background-color:#0c3643;">
         <div
@@ -61,6 +61,7 @@
           >
           <center>
             <h2 class="justify-content-center text-white"><i class="material-icons bg-light rounded mr-2">person</i>Login</h2>
+            <hr style="background-color: #ffffff; height:3px;">
           </center>
            <div class="bg-danger text-danger fw-bolder rounded" role="alert">
             {% for message in messages %}
@@ -109,14 +110,14 @@
                 id="exampleCheck1"
                 required
               />
-              <label class="form-check-label text-white" for="checkme"
+              <label class="form-check-label text-white text-start" for="checkme"
                 >Remember me</label
               >
               <a
                 class="pass para d-inline-block text-white justify-content-end py-1 float-right px-3"
                 href="#"
               >
-                Forgot Password</a
+                Forgot</a
               >
             </div>
             <input type="submit" value="Login" class="btn btn-success form-control"/>
