@@ -196,6 +196,17 @@ fieldset {
   font-family: 'Unna', serif !important;
   font-style:italic;
 }
+.man {
+  font-size:1.4em;
+  font-family: 'Unna', serif !important;
+  font-style:italic;
+  font-weight:light;
+  background:#01291e;
+}
+.goe {
+  background-color:#fff !important;
+  height:1px !important;
+}
 
 /* Header for each section*/
 .text-container {
@@ -252,9 +263,9 @@ fieldset {
 }
 
 .image {
-  height:300px;
+  height:100px;
   object-fit: cover;
-  border-radius:10px;
+  
 }
 .header-background {
   font-weight: 700;
@@ -281,7 +292,7 @@ fieldset {
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
-  background-color: #00cc00; /* Set a background color */
+  background-color: #070444; /* Set a background color */
   color: white; /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
   padding: 15px; /* Some padding */
@@ -292,7 +303,7 @@ fieldset {
 }
 
 #myBtn:hover {
-  background-color: #100995; /* Add a dark-grey background on hover */
+  background-color: #0a322c; /* Add a dark-grey background on hover */
 }
 
 /*matches section*/

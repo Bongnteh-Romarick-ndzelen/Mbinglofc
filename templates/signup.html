@@ -24,30 +24,33 @@
   </head>
   <body class="bg-img">
     <section>
-      <div class="container shadow-lg" style="background-color:#0c3643;">
+      <div class="container shadow-lg" style="background-color: #0c3643">
         <div
-          class="container col-lg-7 mt-5 p-4 card rounded-20 shadow"
-          style="background-color: #0f310f;"
+          class="container col-lg-5 mt-5 p-4 card rounded-20 shadow"
+          style="background-color: #0f310f"
         >
           <center>
             <h2 class="justify-content-center text-white">
               <i class="material-icons bg-light rounded mr-2">person</i>Register
-            </h2><hr style="background-color: white; height:3px;">
+            </h2>
+            <hr style="background-color: white; height: 3px" />
           </center>
-           <div class="bg-danger text-danger fw-bolder rounded" role="alert">
+          <div
+            class="bg-danger text-danger fw-bolder rounded mx-2"
+            role="alert"
+          >
             {% for message in messages %}
-            <h5 class="p-3">{{message}}</h5>
+            <h6 class="p-2">{{message}}</h6>
             {% endfor %}
           </div>
           <form
-            class="card rounded-15 shadow"
-            style="background-color: #112e10;"
+            class="container-fluid m-0 rounded-15 shadow"
+            style="background-color: #112e10"
             action=""
             method="post"
           >
             {% csrf_token %}
-            <div class="form-group text-white">
-              <label for="username"></label>
+            <div class="form-group text-white mt-1">
               <div class="input-group">
                 <div class="input-group-addon bg-danger">
                   <i class="material-icons justify-content-center">person</i>
@@ -55,15 +58,14 @@
                 <input
                   name="username"
                   type="text"
-                  class="form-control text-center"
+                  class="form-control text-center m-0"
                   id="username"
                   placeholder="Enter Your Username"
                   required
                 />
               </div>
             </div>
-            <div class="form-group text-white">
-              <label for="email"></label>
+            <div class="form-group text-white mt-1">
               <div class="input-group">
                 <div class="input-group-addon bg-danger">
                   <i class="material-icons justify-content-center">email</i>
@@ -71,15 +73,29 @@
                 <input
                   name="email"
                   type="email"
-                  class="form-control text-center"
+                  class="form-control text-center m-0"
                   id="email"
                   placeholder="Enter Your Email Address"
                   required
                 />
               </div>
             </div>
-            <div class="form-group text-white">
-              <label for="password"></label>
+            <div class="form-group text-white mt-1">
+              <div class="input-group">
+                <div class="input-group-addon bg-danger">
+                  <i class="material-icons justify-content-center">phone</i>
+                </div>
+                <input
+                  name="first_name"
+                  type="tel"
+                  class="form-control text-center m-0"
+                  id="number"
+                  placeholder="Enter Your Phone Number"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-group text-white mt-1">
               <div class="input-group">
                 <div class="input-group-addon bg-danger">
                   <i class="material-icons justify-content-center">key</i>
@@ -87,15 +103,14 @@
                 <input
                   name="password"
                   type="password"
-                  class="form-control text-center"
+                  class="form-control text-center m-0"
                   id="password"
                   placeholder="Enter Your Password"
                   required
                 />
               </div>
             </div>
-            <div class="form-group text-white">
-              <label for="password"></label>
+            <div class="form-group text-white mt-1">
               <div class="input-group">
                 <div class="input-group-addon bg-danger">
                   <i class="material-icons justify-content-center">key</i>
@@ -110,11 +125,15 @@
                 />
               </div>
             </div>
-            <input type="submit" value="Register" class="form-control mt-2" />
+            <input
+              type="submit"
+              value="Register"
+              class="form-control mt-2 py-2"
+            />
           </form>
           <div class="text-center mt-2 justify-content-center">
             <p class="para text-white">
-              Already have an account<a class="text-danger m-3" href="/login"
+              <em>Already have an account</em><a class="text-danger m-3" href="/login"
                 >Login</a
               >
             </p>
