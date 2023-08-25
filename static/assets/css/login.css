@@ -68,12 +68,12 @@ input[type="submit"]:hover {
   color: black;
 }
 input[type="text"],
-input[type="number"],
+input[type="tel"],
 input[type="email"],
 input[type="password"] {
   padding: 5px 0 !important;
   background-color:#d7ffff !important;
-  margin:0 !important;
+  margin:1px 0 !important;
 }
 .img-fluid {
   height: 1em;

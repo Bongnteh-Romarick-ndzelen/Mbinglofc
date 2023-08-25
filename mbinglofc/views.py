@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
+from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
-from .models import Profile, BlogPost, UpcomingMatches
+from .models import Profile, BlogPost, UpcomingMatches, Results
 from .forms import ContactForm
 
 
@@ -12,19 +13,19 @@ from .forms import ContactForm
 def index(request):
     BlogPosts = BlogPost.objects.all()
     Matches = UpcomingMatches.objects.all()
+    Result = Results.objects.all()
     
-    if request.method == "POST":
-        form = ContactForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect("index")
-    else:
-        form = ContactForm()
+    form = ContactForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        messages.success(request,'Thank you!, Your message has been submitted successfully.')
+        return HttpResponseRedirect("/")
     
     context = {
         'BlogPosts': BlogPosts,
         'form': form,
-        'Matches': Matches
+        'Matches': Matches,
+        'Result':Result
     }
     
     return render(request, "index.html", context)
@@ -109,9 +110,33 @@ def profile(request):
 
 @login_required(login_url="login")
 def settings(request):
-    return render(request, "settings.html")
+    user_profile = Profile.objects.get(user = request.user)
+    
+    if request.method == 'POST':
+        if request.FILES.get('image') == None:
+            profileimg = user_profile.profileimg
+            bio = request.POST['bio']
+            location = request.POST['location']
+            
+            user_profile.profileimg = profileimg
+            user_profile.bio = bio
+            user_profile.location = location
+            user_profile.save()
+            
+        if request.FILES.get('image') != None:
+            proileimg = user_profile.profileimg
+            bio = request.POST['bio']
+            location = request.POST['location']
+            
+            user_profile.profileimg = profileimg
+            user_profile.bio = bio
+            user_profile.location = location
+            user_profile.save()
+            
+        return redirect('settings')
+    return render(request, "settings.html",{'user_profile':user_profile})
 
-
+@login_required(login_url="login")
 def logout(request):
     auth.logout(request)
     return redirect("login")

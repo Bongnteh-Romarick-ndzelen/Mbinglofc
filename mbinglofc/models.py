@@ -57,3 +57,16 @@ class UpcomingMatches(models.Model):
 
     def __str__(self):
         return self.team1
+    
+class Results(models.Model):
+    team1 = models.CharField(max_length=200)
+    team2 = models.CharField(max_length=200, default=False)
+    date = models.DateField(auto_now=False, auto_now_add=False)
+    scores = models.IntegerField(null=True)
+    score2 = models.IntegerField(null=True, default=False)
+    competition_name = models.TextField(default=False)
+    
+    def __str__(self):
+        return self.competition_name
+    
+    

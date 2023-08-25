@@ -108,6 +108,14 @@ fieldset {
     padding: 0;
     width: 100%
 }
+#contactus label {
+  font-size:1.3rem !important;
+  color:white;
+}
+label {
+  font-size:1.3rem !important;
+  color:white;
+}
 
 #contactus input[type="text"],
 #contactus input[type="email"],
@@ -225,9 +233,14 @@ fieldset {
   background-color:#0f2810;
   color:#ffffff;
   margin-bottom:12px;
+  
 }
 .about {
   font-size:1.3em !important;
+}
+.about-us {
+  font-size:1.3em !important;
+  background-color:#58d51c !important;
 }
 
 .section-title h2 {
@@ -245,11 +258,10 @@ fieldset {
 
 .section-title h2::after {
   content: "";
-  width: 120px;
   height: 1px;
   display: inline-block;
   background: rgb(4, 107, 107);
-  margin: 4px 10px;
+  //margin: 4px 10px;
 }
 
 .section-title p {

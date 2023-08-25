@@ -11,7 +11,6 @@
       integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="{% static 'assets/css/home.css' %}" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -37,32 +36,51 @@
       rel="stylesheet"
       id="bootstrap-css"
     />
+    <link rel="stylesheet" href="{% static 'assets/css/settings.css' %}">
 
     <title>MBINGLO-FC</title>
   </head>
 
-  <body style="background-color: #2dfb6a">
-    <div class="container-fluid h-100 bg-light text-dark">
-      <div class="row justify-content-center align-items-center">
-        <h1>Settings</h1>
+  <body style="background-color: #0f4f4f;">
+    <div class="fixed-top container" style="background-color: #0b0253;">
+      <div class="col-md-7 justify-content-center text-center text-white" style="font-size: 1.5em; padding: 10px 6px;">
+        <p class="text-center"><a href="/">MBINGLO-FC/</a> account settings for <strong>{{ user.username }}</strong></p>
       </div>
-      <hr />
-      <div class="row justify-content-center align-items-center h-100">
-        <div class="col">
-          <form action="">
-            <div class="form-group text-center">
-              <input type="text" name="lasttname" class="form-control-lg" placeholder="Last Name here.."/>
-            </div>
-            <div class="form-group text-center">
-              <input type="text" name="firstname" class="form-control-lg" placeholder="First Name here.."/>
-            </div>
-            <div class="form-group text-center">
-              <input type="email" name="email" class="form-control-lg" placeholder="Email here.." />
-            </div>
-            <div class="form-group">
-              <textarea class="form-control-lg" name='bio' row='3'></textarea>
-            </div>
+    </div><br><br><br><br>
+    <div class="container-fluid justify-content-center">
+      <div class="row justify-content-center">
+        <div class="col-md-5 shadow text-white mt-3 pt-3" style="background-color: #0b3733;">
+          <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group mt-2">
+            <label for="file"><strong>Profile image</strong></label><br>
+            <img height="50" width="50" style="height: 100px; width: 100px; border-radius: 50px; margin: 6px 2px;" name='profileimg' src="{{ user_profile.profileimg.url }}" alt="">
+            <input type="file" name="profileimg" value="{{ user_profile.profileimg.url }}" class="form-control imge" id="profileimg">
+          </div>
+          <div class="form-group">
+            <label for="text"><strong>Bio</strong></label>
+            <textarea name="bio" id="bio" cols="" rows="3" value='' class="form-control imge">{{ user_profile.bio }}</textarea>
+          </div>
+          <div class="form-group">
+            <label for="text"><strong>Location</strong></label>
+            <input type="text" name="location" value="{{ user_profile.location }}" class="form-control imge">
+          </div>
+          <div class="justify-content-end d-flex mb-3">
+            <a href="/" class="bg-transparent text-danger mx-2 border-0 mt-2 fw-bolder"><strong>Cancel</strong></a>
+            <button type="submit" class="btn btn-danger text-light mx-2">Save</button>
+          </div>
           </form>
+        </div>
+      </div>
+    </div><br><br>
+
+    <div class="footer fixed-bottom text-white" style="background-color: #0b3332;">
+      <div class="container">
+        <div class="col-md-8 d-flex align-content-between justify-content-center">
+          <p class="mr-5"><em>CopyRight 2023! </em>
+          </p>
+          <p class="mr-5">All right reserved</p>
+          <p class="mr-5"><a href="">About Developer</a></p>
         </div>
       </div>
     </div>

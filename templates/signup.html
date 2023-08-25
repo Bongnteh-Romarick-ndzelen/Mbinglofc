@@ -24,7 +24,7 @@
   </head>
   <body class="bg-img">
     <section>
-      <div class="container shadow-lg" style="background-color: #0c3643">
+      <div class="container shadow-lg" style="background-color: #bdd2c4;">
         <div
           class="container col-lg-5 mt-5 p-4 card rounded-20 shadow"
           style="background-color: #0f310f"
@@ -44,13 +44,13 @@
             {% endfor %}
           </div>
           <form
-            class="container-fluid m-0 rounded-15 shadow"
+            class="container-fluid rounded-15 shadow"
             style="background-color: #112e10"
             action=""
             method="post"
           >
             {% csrf_token %}
-            <div class="form-group text-white mt-1">
+            <div class="form-group text-white">
               <div class="input-group">
                 <div class="input-group-addon bg-danger">
                   <i class="material-icons justify-content-center">person</i>
@@ -58,14 +58,14 @@
                 <input
                   name="username"
                   type="text"
-                  class="form-control text-center m-0"
+                  class="form-control text-center"
                   id="username"
                   placeholder="Enter Your Username"
                   required
                 />
               </div>
             </div>
-            <div class="form-group text-white mt-1">
+            <div class="form-group text-white">
               <div class="input-group">
                 <div class="input-group-addon bg-danger">
                   <i class="material-icons justify-content-center">email</i>
@@ -73,14 +73,14 @@
                 <input
                   name="email"
                   type="email"
-                  class="form-control text-center m-0"
+                  class="form-control text-center"
                   id="email"
                   placeholder="Enter Your Email Address"
                   required
                 />
               </div>
             </div>
-            <div class="form-group text-white mt-1">
+            <div class="form-group text-white">
               <div class="input-group">
                 <div class="input-group-addon bg-danger">
                   <i class="material-icons justify-content-center">phone</i>
@@ -88,14 +88,14 @@
                 <input
                   name="first_name"
                   type="tel"
-                  class="form-control text-center m-0"
+                  class="form-control text-center"
                   id="number"
                   placeholder="Enter Your Phone Number"
                   required
                 />
               </div>
             </div>
-            <div class="form-group text-white mt-1">
+            <div class="form-group text-white">
               <div class="input-group">
                 <div class="input-group-addon bg-danger">
                   <i class="material-icons justify-content-center">key</i>
@@ -103,14 +103,14 @@
                 <input
                   name="password"
                   type="password"
-                  class="form-control text-center m-0"
+                  class="form-control text-center"
                   id="password"
                   placeholder="Enter Your Password"
                   required
                 />
               </div>
             </div>
-            <div class="form-group text-white mt-1">
+            <div class="form-group text-white">
               <div class="input-group">
                 <div class="input-group-addon bg-danger">
                   <i class="material-icons justify-content-center">key</i>
@@ -128,7 +128,7 @@
             <input
               type="submit"
               value="Register"
-              class="form-control mt-2 py-2"
+              class="form-control mt-1 py-2"
             />
           </form>
           <div class="text-center mt-2 justify-content-center">

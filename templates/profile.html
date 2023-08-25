@@ -15,7 +15,6 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;1,800;1,900&family=Oswald:wght@400;500&display=swap"
       rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'assets/css/hom.css' %}" />
     <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Unna&display=swap" rel="stylesheet">
@@ -31,20 +30,20 @@
           <li style='padding-top:10px; font-size:1.5em;'>
             <a href="/"><em>MBINGLO FC</em></a>
           </li>
-          <p class='justify-content-end text-right pb-4 mb-4'><!--img class="img-fluid rounded-circle float-right mb-2" style='height:70px;' src="{% static 'assets/img/romarick.jpeg.png' %}" alt=""--><em>Romarick Ndzelen</em></p>
+          <p class='justify-content-end text-right pb-4 mb-4'><strong>{{ user.username }}</strong></p>
         </ul>
     </div>
     <div class='text-start mx-5'>
-      <h4 style="font-family: 'unna', sans-serif;"><em>Username,</em> Your'e welcome to your profile page. Below is your information</h4>
+      <h4 style="font-family: 'unna', sans-serif;"><strong>{{ user.username }}</strong> Your'e welcome to your profile page. Below is your information</h4>
     </div>
     <div class='container'>
         <div class='row shadow justify-content-center p-5' style='background-color:#062844;'>
           <p class="text-white mb-2" style="font-family: 'unna', sans-serif; font-size: 1.3em;"><em>Note that your information below is secured and you are the only one seing it. Not even admin can have access to it!</em></p>
           <div class='col-md-8 col-lg-8 justify-content-center shaddow p-4 text-white' style='background-color:#021422;'>
-              <p class='shadow' style='background-color:#030c0e; padding:5px;'><em>Your Username :</em></p> <hr style='background-color:#ffffff;'>
-              <p class='shadow' style='background-color:#030c0e; padding:5px;'><em>Your name :</em></p> <hr style='background-color:#ffffff;'>
-              <p class='shadow' style='background-color:#030c0e; padding:5px;'><em>Your Email Address :</em></p><hr style='background-color:#ffffff;'>
-              <p class='shadow' style='background-color:#030c0e; padding:5px;'><em>Your Phone number :</em></p><hr style='background-color:#ffffff;'>
+              <p class='shadow' style='background-color:#030c0e; padding:5px;'><em>Your Username : </em><strong>{{ user.username }}</strong></p> <hr style='background-color:#ffffff;'>
+              <p class='shadow' style='background-color:#030c0e; padding:5px;'><em>Your name : </em><strong>{{ user.username }}</strong></p> <hr style='background-color:#ffffff;'>
+              <p class='shadow' style='background-color:#030c0e; padding:5px;'><em>Your Email Address : </em><strong>{{ user.email }}</strong></p><hr style='background-color:#ffffff;'>
+              <p class='shadow' style='background-color:#030c0e; padding:5px;'><em>Your Phone number : </em><strong>{{ user.first_name }}</strong></p><hr style='background-color:#ffffff;'>
           </div>
         </div>
     </div>
