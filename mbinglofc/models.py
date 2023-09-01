@@ -69,4 +69,11 @@ class Results(models.Model):
     def __str__(self):
         return self.competition_name
     
+#creating a model for comment
+class Comment(models.Model):
+    person = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+    comment = models.TextField(default=True)
+    updated = models.DateTimeField(default=False)
     
+    def __str__(self):
+        return self.comment

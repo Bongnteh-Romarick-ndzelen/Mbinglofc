@@ -124,7 +124,7 @@ def settings(request):
             user_profile.save()
             
         if request.FILES.get('image') != None:
-            proileimg = user_profile.profileimg
+            profileimg = user_profile.profileimg
             bio = request.POST['bio']
             location = request.POST['location']
             

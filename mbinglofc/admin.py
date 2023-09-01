@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Profile, BlogPost, Contact, UpcomingMatches, Results
+from .models import Profile, BlogPost, Contact, UpcomingMatches, Results,Comment
 
 # Register your models here.
 class MatchesAdmin(admin.ModelAdmin):
@@ -17,3 +17,4 @@ admin.site.register(BlogPost, BlogPostAdmin)
 admin.site.register(Contact, ContactAdmin)
 admin.site.register(UpcomingMatches, MatchesAdmin)
 admin.site.register(Results, ResultAdmin)
+admin.site.register(Comment)

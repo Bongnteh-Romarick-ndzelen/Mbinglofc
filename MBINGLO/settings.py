@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bootstrap4',
     'mbinglofc',
+    'django_social_share',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
