@@ -22,12 +22,12 @@
       rel="stylesheet"
     />
   </head>
-  <body class="bg-img">
+  <body style="background-color: #171b1f;">
     <section>
-      <div class="container shadow-lg" style="background-color: #bdd2c4;">
+      <div class="container shadow-lg" style="background-color: #171b1f;">
         <div
           class="container col-lg-5 mt-5 p-4 card rounded-20 shadow"
-          style="background-color: #0f310f"
+          style="background-color: #202641; border:solid 1px #fff;"
         >
           <center>
             <h2 class="justify-content-center text-white">
@@ -36,7 +36,7 @@
             <hr style="background-color: white; height: 3px" />
           </center>
           <div
-            class="bg-danger text-danger fw-bolder rounded mx-3 my-2 fs-6"
+            class="alert-danger text-danger rounded mx-3 my-2 fs-6"
             role="alert"
           >
             {% for message in messages %}
@@ -45,8 +45,8 @@
           </div>
           <form
             class="container-fluid rounded-15 shadow"
-            style="background-color: #112e10"
             action=""
+            autocomplete="off"
             method="post"
           >
             {% csrf_token %}
@@ -128,12 +128,12 @@
             <input
               type="submit"
               value="Register"
-              class="form-control mt-1 py-2"
+              class="form-control mt-1 py-2 btn btn-outline-primary"
             />
           </form>
           <div class="text-center mt-2 justify-content-center">
-            <p class="para text-white">
-              <em>Already have an account</em><a class="text-danger m-3" href="/login"
+            <p class="text-white">
+              <i>Already have an account</i><a class="text-danger m-3" href="/login"
                 >Login</a
               >
             </p>

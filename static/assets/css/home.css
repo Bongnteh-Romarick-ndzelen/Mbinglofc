@@ -126,8 +126,8 @@ label {
     border: 1px solid #ccc;
     background: #82ccc1;
     margin: 0 0 5px;
-    padding: 15px;
-    font-size:1.5em;
+    padding: 10px;
+    font-size:1.2em;
 }
 
 #contactus input[type="text"]:hover,
@@ -154,9 +154,9 @@ label {
     border: none;
     background: #013223;
     color: #FFF;
-    margin: 0 0 5px;
-    padding: 15px;
-    font-size: 18px
+    margin: 6px;
+    padding: 10px;
+    font-size: 1.3em;
 }
 
 #contactus button[type="submit"]:hover {
@@ -301,7 +301,7 @@ label {
   position: fixed; /* Fixed/sticky position */
   bottom: 20px; /* Place the button at the bottom of the page */
   right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
+  z-index: 1500; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
   background-color: #070444; /* Set a background color */
@@ -315,7 +315,7 @@ label {
 }
 
 #myBtn:hover {
-  background-color: #0a322c; /* Add a dark-grey background on hover */
+  background-color: #852707; /* Add a dark-grey background on hover */
 }
 
 /*matches section*/
@@ -925,7 +925,7 @@ label {
   cursor: pointer;
   opacity: 1;
   position: fixed;
-  bottom: 36px;
+  bottom: 50px;
   right: 35px;
   width: 80px;
   border-radius:10px;

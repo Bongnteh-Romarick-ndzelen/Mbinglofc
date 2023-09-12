@@ -54,19 +54,10 @@ body {
   //border-radius: 5px !important;
   color: #ffe1ea !important;
 }
-input[type="submit"] {
-  font-size: 1em;
-  background-color: #13df37;
-  color: black;
-  font-weight: bold;
-  padding: 3px !important;
+
   //padding-bottom: 10px !important;
-}
-input[type="submit"]:hover {
-  background-color: #0d5259;
-  font-weight: bold;
-  color: black;
-}
+
+
 input[type="text"],
 input[type="tel"],
 input[type="email"],

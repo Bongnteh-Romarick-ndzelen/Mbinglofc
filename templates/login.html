@@ -25,23 +25,23 @@
     />
   </head>
 
-  <body class="bg-img">
+  <body style="background-color: #171b1f;">
     <section>
-      <div class="container shadow-lg align-content-center justify-content-center align-items-center" style="background-color:#bdd2c4;">
+      <div class="container shadow-lg align-content-center justify-content-center align-items-center" style="background-color:#171b1f;">
         <div
           class="container col-lg-5 mt-2 p-4 card shadow"
-          style="background-color: #0f2f0f;"
+          style="background-color: #202641; border:solid 1px #fff;"
           >
           <center>
             <h2 class="justify-content-center text-white"><i class="material-icons bg-light rounded mr-2">person</i>Login</h2>
-            <hr style="background-color: #ffffff; height:3px;">
+            <hr style="background-color: #ffffff; height:1px;">
           </center>
-           <div class="bg-danger text-danger fw-bolder rounded mx-3 my-2" role="alert">
+           <div class="alert-danger text-danger rounded mx-3 my-2" role="alert">
             {% for message in messages %}
             <h6 class="py-2 px-2">{{message}}</h6>
             {% endfor %}
           </div>
-          <form class="container-fluid shadow" method="post" action="" style="background-color:#112e10;">
+          <form class="container-fluid shadow" method="post" action="" autocomplete="off">
             {% csrf_token %}
             <div class="form-group text-white">
               <div class="input-group">
@@ -90,10 +90,10 @@
                 Forgot Password</a
               >
             </div>
-            <input type="submit" value="Login" class="btn btn-success form-control"/>
+            <input type="submit" value="Login" class="btn btn-outline-primary form-control"/>
           </form>
           <div class="text-center mt-0 justify-content-center">
-            <p class="para text-white"><em>Don't yet have an account</em>
+            <p class="text-white"><em>Don't yet have an account</em>
               <a class="text-danger mx-3" href="/signup">Signup</a>
             </p>
           </div>

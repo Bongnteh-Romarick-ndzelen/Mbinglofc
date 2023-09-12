@@ -18,7 +18,7 @@ def index(request):
     form = ContactForm(request.POST or None)
     if form.is_valid():
         form.save()
-        messages.success(request,'Thank you!, Your message has been submitted successfully.')
+        messages.info(request,'Thank you!, Your message has been submitted successfully.')
         return HttpResponseRedirect("/")
     
     context = {
