@@ -24,7 +24,7 @@ body {
     background-color: #012061;
 }
 .submit {
-  background-color: #14A76C;
+  background-color: #07432c;
 }
 input[type='submit']:hover {
   background-color: background-color:rgb(4, 107, 107);
@@ -78,14 +78,12 @@ html {
 }
 
 #contactus {
-    font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
-    background: #03694a;
+    background: #293038 !important;
     padding: 25px;
     margin: 30px 0;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24)
 }
 
-#contactus {}
 
 #contactus h3 {
     //display: block;
@@ -101,19 +99,12 @@ html {
     font-weight: 400
 }
 
-fieldset {
-    border: medium none !important;
-    margin: 0 0 10px;
-    min-width: 100%;
-    padding: 0;
-    width: 100%
-}
 #contactus label {
-  font-size:1.3rem !important;
+  font-size:1.2rem !important;
   color:white;
 }
 label {
-  font-size:1.3rem !important;
+  font-size:1.2rem !important;
   color:white;
 }
 
@@ -124,9 +115,10 @@ label {
 #contactus textarea {
     width: 100%;
     border: 1px solid #ccc;
-    background: #82ccc1;
+    background: #373e46;
     margin: 0 0 5px;
     padding: 10px;
+    color:#ffffff;
     font-size:1.2em;
 }
 
@@ -141,12 +133,6 @@ label {
     border: 1px solid #aaa
 }
 
-#contactus textarea {
-    height: 100px;
-    max-width: 100%;
-    resize: none;
-    background: #82ccc1;
-}
 
 #contactus button[type="submit"] {
     cursor: pointer;
@@ -217,12 +203,6 @@ label {
 }
 
 /* Header for each section*/
-.text-container {
-
-  padding: 10px;
-  border-radius: 7px;
-  font-size: 30px;
-}
 
 .section-bg {
   background-color: #f5f5ff;
@@ -230,9 +210,8 @@ label {
 
 .section-title {
   padding: 30px;
-  background-color:#0f2810;
+  background-color:#040b04;
   color:#ffffff;
-  margin-bottom:12px;
   
 }
 .about {
@@ -323,13 +302,13 @@ label {
 
 /*Fotter section*/
 .footer {
-  background-color:#1b4b1c;
+  background-color:#0b1e0b;
   padding:10px;
   color:#ffffff;
   font-style:Italianno;
 }
 .foote {
-  background-color:#0f2810;
+  background-color:#252525;
 }
 .founder {
   background-color:#689362;
@@ -967,6 +946,17 @@ label {
   background-color: #ddd;
   outline: none;
   border-radius:10px;
+}
+
+.textinput .emailinput {
+  background-color:#0a2922 !important;
+  color: white !important;
+}
+
+.textarea {
+  background-color:#0a2922 !important;
+  color: white !important;
+  height:100px !important;
 }
 
 /* Set a style for the submit/send button */

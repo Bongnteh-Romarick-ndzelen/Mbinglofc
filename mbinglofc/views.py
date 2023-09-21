@@ -18,8 +18,8 @@ def index(request):
     form = ContactForm(request.POST or None)
     if form.is_valid():
         form.save()
-        messages.info(request,'Thank you!, Your message has been submitted successfully.')
-        return HttpResponseRedirect("/")
+        messages.info(request,'Thank you!, Your message has been submitted successfully. we will get back to you soon')
+        return HttpResponseRedirect("/#contact")
     
     context = {
         'BlogPosts': BlogPosts,
@@ -98,7 +98,7 @@ def login(request):
         else:
             messages.info(
                 request,
-                "Invalid Credentials, please make sure you enter the correct information in oder to login",
+                "Invalid Credentials, please make sure you enter the correct information in order to log in!",
             )
             return redirect("login")
     else:
@@ -110,10 +110,13 @@ def profile(request):
 
 @login_required(login_url="login")
 def settings(request):
-    user_profile = Profile.objects.get(user = request.user)
-    
+    try:
+        user_profile = Profile.objects.get(user=request.user)
+    except Profile.DoesNotExist:
+        # Create a new Profile object if it doesn't exist
+        user_profile = Profile.objects.create(user=request.user)
     if request.method == 'POST':
-        if request.FILES.get('image') == None:
+        if request.FILES.get('profileimg') is None:
             profileimg = user_profile.profileimg
             bio = request.POST['bio']
             location = request.POST['location']
@@ -123,8 +126,8 @@ def settings(request):
             user_profile.location = location
             user_profile.save()
             
-        if request.FILES.get('image') != None:
-            profileimg = user_profile.profileimg
+        if request.FILES.get('profileimg') is not None:
+            profileimg = request.FILES.get('profileimg')
             bio = request.POST['bio']
             location = request.POST['location']
             
@@ -134,7 +137,8 @@ def settings(request):
             user_profile.save()
             
         return redirect('settings')
-    return render(request, "settings.html",{'user_profile':user_profile})
+    
+    return render(request, "settings.html", {'user_profile': user_profile})
 
 @login_required(login_url="login")
 def logout(request):
